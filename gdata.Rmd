@@ -1,0 +1,30 @@
+---
+title: "Google Location Data Visualization Notebook"
+output: html_notebook
+---
+
+This project is to visualize my personal location data as seen by google.
+
+Originalyl I did this project in Python using 
+
+```{r}
+ library("jsonlite", lib.loc="~/R/win-library/3.6")
+ library("dplyr",lib.loc="~/R/win-library/3.6")
+
+```
+
+
+
+```{r}
+ js <- jsonlite::fromJSON("./gdata.json",simplifyDataFrame = TRUE)
+```
+
+
+```{r}
+df = jsonlite:: flatten(js, recursive = TRUE)
+```
+
+```{r}
+str(js)
+```
+
